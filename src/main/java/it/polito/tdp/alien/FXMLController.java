@@ -56,7 +56,7 @@ public class FXMLController {
     	}
     	
     	StringTokenizer st = new StringTokenizer(riga, " ");
-    	if(!st.hasMoreTokens()) {
+    	if(!st.hasMoreTokens() || st.countTokens()>2) {
     		txtResult.setText("Inserire una o due parole.");
     		return;
     	}

@@ -1,21 +1,29 @@
 package it.polito.tdp.alien.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Word {
 	
 	private String alienWord;
-	private String translation;
+	private Set<String> translations;
 	
 	public Word(String alienWord) {
 		super();
 		this.alienWord = alienWord;
+		translations = new HashSet<String>();
 	}
 
 	public void addTranslation(String translation) {
-		this.translation = translation;
+		this.translations.add(translation);
 	}
 
-	public String getTranslation() {
-		return translation;
+	public String getTranslations() {
+		String s = "";
+		for(String st : translations) {
+			s += st + "\n";
+		}
+		return s;
 	}
 
 	@Override

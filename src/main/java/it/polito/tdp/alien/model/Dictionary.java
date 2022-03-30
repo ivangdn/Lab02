@@ -20,7 +20,7 @@ public class Dictionary {
 	
 	public String translate(String alienWord) {
 		if(dictionary.containsKey(alienWord))
-			return dictionary.get(alienWord).getTranslation();
+			return dictionary.get(alienWord).getTranslations();
 		else	
 			return null;
 	}
